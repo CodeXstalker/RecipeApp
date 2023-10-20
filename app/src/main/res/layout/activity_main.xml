@@ -11,8 +11,8 @@
         android:id="@+id/imageView"
         android:layout_width="@dimen/_50sdp"
         android:layout_height="@dimen/_50sdp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_14sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/menu_home" />
@@ -21,10 +21,245 @@
         android:id="@+id/imageView2"
         android:layout_width="@dimen/_160sdp"
         android:layout_height="@dimen/_160sdp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="@dimen/_55sdp"
+        android:layout_marginEnd="-15dp"
         android:rotation="-1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/home_assest1" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:text="Hello"
+        android:textSize="@dimen/_25sdp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:text="foodie !"
+        android:textColor="@color/purple_500"
+        android:textSize="@dimen/_25sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:text="Which Indian food would you \nlike  to cook ?"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="@dimen/_280sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/searchview"
+        android:focusable="false"
+        android:hint="Search recepie"
+        android:inputType="none"
+        android:paddingStart="@dimen/_43sdp"
+        android:paddingLeft="@dimen/_16sdp"
+        android:textSize="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_9sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/search_ic" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:text="Categories"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:scrollbars="none"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:paddingLeft="@dimen/_16sdp"
+            android:paddingRight="@dimen/_18sdp">
+
+            <ImageView
+                android:id="@+id/img_salad"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/category_card_bc"
+                android:src="@drawable/category_salad" />
+
+            <TextView
+                android:id="@+id/tv_salad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_salad"
+                android:text="Salad"
+                android:textSize="@dimen/_15sdp" />
+
+            <ImageView
+                android:id="@+id/img_mainDish"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_toEndOf="@id/img_salad"
+                android:background="@drawable/category_card_bc"
+                android:src="@drawable/catergory_drinks" />
+
+            <TextView
+                android:id="@+id/tv_mainDish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_mainDish"
+                android:layout_marginStart="@dimen/_22sdp"
+                android:layout_toEndOf="@+id/tv_salad"
+                android:text="Main"
+                android:textSize="@dimen/_15sdp" />
+
+
+            <ImageView
+                android:id="@+id/img_drinks"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_18sdp"
+                android:layout_toEndOf="@id/img_mainDish"
+                android:background="@drawable/category_card_bc"
+                android:src="@drawable/category_dessert" />
+
+            <TextView
+                android:id="@+id/tv_drinks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_drinks"
+                android:layout_marginStart="@dimen/_22sdp"
+                android:layout_toEndOf="@+id/tv_mainDish"
+                android:text="Drinks"
+                android:textSize="@dimen/_15sdp" />
+
+            <ImageView
+                android:id="@+id/img_desserts"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_toEndOf="@id/img_drinks"
+                android:background="@drawable/category_card_bc"
+                android:src="@drawable/category_dessert" />
+
+            <TextView
+                android:id="@+id/tv_desserts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_drinks"
+                android:layout_marginStart="@dimen/_22sdp"
+                android:layout_toEndOf="@+id/tv_drinks"
+                android:text="Desserts"
+                android:textSize="@dimen/_15sdp" />
+
+
+            <ImageView
+                android:id="@+id/img_soup"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:layout_toEndOf="@id/img_desserts"
+                android:background="@drawable/category_card_bc"
+                android:src="@drawable/category_dessert" />
+
+            <TextView
+                android:id="@+id/tv_soup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_drinks"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_toEndOf="@+id/tv_desserts"
+                android:text="Soup"
+                android:textSize="@dimen/_15sdp" />
+
+
+            <ImageView
+                android:id="@+id/img_pies"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_toEndOf="@id/img_soup"
+                android:background="@drawable/category_card_bc"
+                android:src="@drawable/category_dessert" />
+
+            <TextView
+                android:id="@+id/tv_pies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_drinks"
+                android:layout_marginStart="@dimen/_19sdp"
+                android:layout_toEndOf="@+id/tv_soup"
+                android:text="Pies"
+                android:textSize="@dimen/_15sdp" />
+
+        </RelativeLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Popular Recipe"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_popularRecipe"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_6sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
