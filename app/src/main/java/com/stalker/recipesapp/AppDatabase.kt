@@ -5,6 +5,5 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [Recipe_Modal::class], exportSchema = false, version = 1)
 abstract class AppDatabase : RoomDatabase() {
-
     abstract fun getDao(): Dao
 }

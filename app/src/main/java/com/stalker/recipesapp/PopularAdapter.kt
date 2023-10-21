@@ -1,6 +1,7 @@
 package com.stalker.recipesapp
 
 import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,7 +36,12 @@ class PopularAdapter(var dataList: ArrayList<Recipe_Modal>, var context: Context
         /**
          * here we are loading images from the link in RoomDB
          */
-        Glide.with(context).load(dataList.get(position)).into(holder.popularImage)
+
+        Log.d("ImageURL", dataList.get(position).img ?: "Image URL is null or empty")
+        val imgUrl = dataList.get(position).img
+        if (!imgUrl.isNullOrEmpty()) {
+            Glide.with(context).load(imgUrl).into(holder.popularImage)
+        }
     }
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val popularImage: ImageView = itemView.findViewById(R.id.iv_popularImage)
