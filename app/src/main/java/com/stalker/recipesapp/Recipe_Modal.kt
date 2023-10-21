@@ -5,9 +5,9 @@ import androidx.room.PrimaryKey
 
 
 @Entity(tableName = "recipe")
-class Recipe(
+class Recipe_Modal(
     var img: String,
-    var title: String,
+    var tittle: String,
     var des: String,
     var ing: String,
     var category: String

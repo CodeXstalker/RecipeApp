@@ -1,9 +1,11 @@
 package com.stalker.recipesapp
 
+import androidx.room.Dao
 import androidx.room.Query
 
+@Dao
 interface Dao {
-    @get: Query("SELECT * FROM recipe")
-    var all : List<Recipe>?
-
+    @Query("SELECT * FROM recipe")
+//    fun getAll(): ArrayList<Recipe_Modal?>?
+    fun getAll(): List<Recipe_Modal>?
 }
