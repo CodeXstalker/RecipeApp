@@ -1,5 +1,6 @@
 package com.stalker.recipesapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setUpRecyclerView()
+        searchRecipeAction()
     }
 
     private fun setUpRecyclerView() {
@@ -38,5 +40,16 @@ class MainActivity : AppCompatActivity() {
             adapter = PopularAdapter(dataList, this)
             binding.rvPopularRecipe.adapter = adapter
         }
+    }
+
+
+    private fun searchRecipeAction() {
+        binding.etSearchRecipe.setOnClickListener {
+            intentToSearchActivity()
+        }
+    }
+
+    private fun intentToSearchActivity() {
+        startActivity(Intent(this, SearchActivity::class.java))
     }
 }
