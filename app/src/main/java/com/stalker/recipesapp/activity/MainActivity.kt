@@ -1,10 +1,13 @@
-package com.stalker.recipesapp
+package com.stalker.recipesapp.activity
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
+import com.stalker.recipesapp.database.AppDatabase
+import com.stalker.recipesapp.adapter.PopularAdapter
+import com.stalker.recipesapp.modal.Recipe_Modal
 import com.stalker.recipesapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

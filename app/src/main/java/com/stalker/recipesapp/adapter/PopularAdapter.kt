@@ -1,4 +1,4 @@
-package com.stalker.recipesapp
+package com.stalker.recipesapp.adapter
 
 import android.content.Context
 import android.util.Log
@@ -9,6 +9,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.stalker.recipesapp.R
+import com.stalker.recipesapp.modal.Recipe_Modal
 
 class PopularAdapter(var dataList: ArrayList<Recipe_Modal>, var context: Context) :
     RecyclerView.Adapter<PopularAdapter.ViewHolder>() {

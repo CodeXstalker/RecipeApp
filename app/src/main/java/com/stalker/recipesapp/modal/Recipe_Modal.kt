@@ -1,4 +1,4 @@
-package com.stalker.recipesapp
+package com.stalker.recipesapp.modal
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
