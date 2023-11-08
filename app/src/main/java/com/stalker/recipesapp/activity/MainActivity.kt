@@ -20,6 +20,14 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setUpRecyclerView()
         searchRecipeAction()
+
+        binding.imgSalad.setOnClickListener{
+            var myIntent = Intent(this@MainActivity, CategoriesActivity::class.java)
+            myIntent.putExtra("TITTLE","")
+            myIntent.putExtra("CATEGORIES","")
+            startActivity(myIntent)
+
+        }
     }
 
     private fun setUpRecyclerView() {
